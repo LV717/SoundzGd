@@ -61,6 +61,10 @@ def create_artist(id, name, bio, user, passw, yt_link, a_email, g_id, is_band_le
         )
         conn.execute(stmt)
 
+def get_all_artists():
+        select_command = artist.select()
+        rows = conn.execute(select_command)
+        return rows
 
 #App routes
 
