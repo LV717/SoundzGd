@@ -66,6 +66,7 @@ def get_all_artists():
         rows = conn.execute(select_command)
         return rows
 
+# artist check
 def is_artist(id):
         query = artist.select().where(artist.c.artist_id==id)
         rows = conn.execute(query).fetchall()
